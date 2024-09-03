@@ -2,7 +2,7 @@
     background-color: lightgreen;
   }
   .Fimochi {
-    width: 80px;
+    width: 90px;
     height: 90px;
 
   }
@@ -16,10 +16,11 @@
     border-style: dotted;
     cursor: pointer;
     transition: background-color 0.7s, color 0.7s;
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content:center;
+    align-self: center;
+    justify-self: center;
   }
   .yt-channel:hover {
     background-color: white;
@@ -36,11 +37,14 @@
     width: 200px;
     height: 100px;
     border-radius: 10px;
-    border-style: dashed;
+    border-style: dotted;
     cursor: pointer;
     transition: background-color 0.7s, color 0.7s;
     position: relative;
-    left: 40%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
   }
   .scratch:hover {
     background-color: white;
@@ -74,4 +78,9 @@
     align-items: flex-start;
     justify-content: space-evenly;
   }
-  
+
+  .Fim-Nav {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+  }
