@@ -49,9 +49,31 @@
 
     <p class="default-text">Click below to DOWNLOAD and PLAY the app! (Only works on android though, sorry iphone users)</p>
 
-    <a href="app-release.apk" download='bullet-bird' target="_blank">
+    <!-- Android download button -->
+    <a href="app-release.apk" download='bullet-bird' target="_blank" id="androidButton" style="display: none;">
         <button class="apk-download">
             <p class="button-text-2">DOWNLOAD</p>
         </button>
     </a>
-            
+
+    <!-- Non-Android button -->
+    <button class="apk-download" id="nonandroidButton" style="display: none;">
+        <p class="button-text-2">CANNOT DOWNLOAD</p>
+    </button>
+
+    <script>
+        // Function to check if the device is Android
+        function isAndroid() {
+            return /Android/i.test(navigator.userAgent);
+        }
+
+        // Show the appropriate button based on the device
+        window.onload = function() {
+            if (isAndroid()) {
+                document.getElementById('androidButton').style.display = 'inline-block';
+            } else {
+                document.getElementById('nonandroidButton').style.display = 'inline-block';
+            }
+        }
+    </script>
+  </div>
